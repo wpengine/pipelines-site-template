@@ -1,0 +1,30 @@
+{
+    "name": "wpengine/pipelines-site-template",
+    "description": "Starter template for WP Engine Pipelines WordPress sites",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.4",
+        "composer/installers": "^2.0",
+        "wpackagist-theme/twentytwentyfive": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "plugins/{$name}/": ["type:wordpress-plugin"],
+            "themes/{$name}/": ["type:wordpress-theme"],
+            "mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
