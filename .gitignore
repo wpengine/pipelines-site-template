@@ -1,0 +1,35 @@
+# Uploads directory
+/uploads/
+
+# Object cache drop-in
+/object-cache.php
+
+# Platform mu-plugins
+/mu-plugins/object-cache-pro/
+/mu-plugins/object-cache-pro.php
+/mu-plugins/be-wpe.php
+/mu-plugins/wp-migrate-db-pro-compatibility.php
+/mu-plugins/wpe-wp-sign-on-plugin/
+/mu-plugins/wpe-wp-sign-on-plugin.php
+
+# Platform plugins
+/plugins/better-search-replace/
+/plugins/wpe-site-migration/
+
+# Composer
+/vendor/
+/auth.json
+
+# OS files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# Development
+node_modules/
+*.log
+*.sql
+*.sql.gz
