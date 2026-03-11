@@ -101,6 +101,27 @@ The following occurs when you push to a repository once you have configured a pi
 3. The pipeline packages the bundled code.
 4. The package is deployed.
 
+## Troubleshooting
+
+### Push fails with HTTP 400 error
+
+If your first push fails with an error like:
+
+```text
+error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
+fatal: the remote end hung up unexpectedly
+```
+
+This typically occurs when pushing large initial commits (themes with fonts/images). Increase Git's HTTP buffer size:
+
+```bash
+git config http.postBuffer 524288000
+```
+
+Then retry your push.
+
+Alternatively, [Git LFS](https://git-lfs.github.com/) can be used for repositories with large binary files.
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
