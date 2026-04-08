@@ -120,8 +120,6 @@ git config http.postBuffer 524288000
 
 Then retry your push.
 
-Alternatively, [Git LFS](https://git-lfs.github.com/) can be used for repositories with large binary files.
-
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
