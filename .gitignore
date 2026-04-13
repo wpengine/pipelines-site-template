@@ -11,6 +11,8 @@
 /mu-plugins/wp-migrate-db-pro-compatibility.php
 /mu-plugins/wpe-wp-sign-on-plugin/
 /mu-plugins/wpe-wp-sign-on-plugin.php
+/mu-plugins/mu-plugin.php
+/mu-plugins/wpengine-common/
 
 # Platform plugins
 /plugins/better-search-replace/
