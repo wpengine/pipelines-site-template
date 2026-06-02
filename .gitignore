@@ -16,6 +16,7 @@
 
 # Platform plugins
 /plugins/better-search-replace/
+/plugins/object-cache-pro/
 /plugins/wpe-site-migration/
 
 # Composer
