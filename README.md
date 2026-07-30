@@ -35,7 +35,10 @@ This repository provides a starting point for WordPress development with WP Engi
 
 ### Themes (Required)
 
-At least one valid WordPress theme must be present in the `themes/` directory. The default TwentyTwentyFive theme is included via Composer.
+The default TwentyTwentyFive theme is included via Composer — run `composer install` and commit the result before pushing.
+
+> [!WARNING]
+> At least one committed WordPress theme is required in the `themes/` directory. Builds will fail if none is present.
 
 ### Plugins (Optional)
 
