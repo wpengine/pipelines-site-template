@@ -114,7 +114,7 @@ If the `wordpress_core_version` field is absent or empty, the platform applies i
 
 ### Supported Versions
 
-Refer to WP Engine documentation for the current list of supported versions.
+Generally, the last 3 major versions will be supported. Please reach out to support if you encounter any issues.
 
 ## Local Development
 
