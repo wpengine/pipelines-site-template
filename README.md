@@ -84,6 +84,38 @@ composer require wpackagist-theme/theme-name
 
 The pipeline's build process does **not** run `composer install`. You must commit all installed files (themes, plugins) to your repository. Use Composer for local dependency management, then commit the results.
 
+## WordPress Version Management
+
+By default, WP Engine automatically manages your WordPress core version and applies patch updates. You can optionally pin your site to a specific major version of WordPress using the `composer.json` configuration.
+
+### Specifying a WordPress Version
+
+To set a specific WordPress major version, add the `wordpress_core_version` field to your `composer.json`:
+
+```json
+{
+  "extra": {
+    "wpengine": {
+      "wordpress_core_version": "6.9"
+    }
+  }
+}
+```
+
+### Version Format
+
+- **Major versions only**: Use the format `"6.9"` or `"7.0"`
+- **Patch-level versions are not supported**: Values like `"6.9.4"` are invalid
+- **Automatic patch updates**: The platform automatically applies security and patch updates within the specified major version
+
+### Platform Default Behavior
+
+If the `wordpress_core_version` field is absent or empty, the platform applies its default WordPress version with automatic updates. No configuration is needed if you prefer this behavior.
+
+### Supported Versions
+
+Refer to WP Engine documentation for the current list of supported versions.
+
 ## Local Development
 
 For local development, you need a separate WordPress installation. This repository provides only wp-content files.
