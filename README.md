@@ -24,6 +24,7 @@ This repository provides a starting point for WordPress development with WP Engi
 ## Repository Structure
 
 ```
+├── config/           # WordPress configuration constants
 ├── plugins/          # Your WordPress plugins
 ├── themes/           # Your WordPress themes (required)
 ├── mu-plugins/       # Your must-use plugins
@@ -47,6 +48,23 @@ Place WordPress plugins in the `plugins/` directory, or install via Composer.
 ### Must-Use Plugins (Optional)
 
 Place mu-plugins in the `mu-plugins/` directory. WP Engine's required mu-plugins are automatically installed during the pipeline's build process.
+
+## WordPress Configuration
+
+> [!IMPORTANT]
+> Do not store secrets (credentials, API keys) here. Sensitive values can be set in the WP Engine User Portal.
+
+`config/config.php` is available for non-sensitive WordPress constants. The file is loaded after platform-managed constants, so platform values take precedence and cannot be overridden.
+
+Use a guard before every `define()` call:
+
+```php
+if ( ! defined( 'MY_CONSTANT' ) ) {
+    define( 'MY_CONSTANT', true );
+}
+```
+
+The starter `config/config.php` includes a commented-out example to get you started.
 
 ## What NOT to Include
 
